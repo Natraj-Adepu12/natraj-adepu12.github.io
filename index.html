@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natraj Adepu - Full Stack Java Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 15px;
+            text-align: justify;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .experience h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .job {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .job h3 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .job .job-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .job .job-duration {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Education Section */
+        .education {
+            background: white;
+            padding: 60px 0;
+        }
+
+        .education h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .degree {
+            background: #f9f9f9;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .degree h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .degree p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: #f9f9f9;
+            padding: 60px 0;
+        }
+
+        .skills h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #667eea;
+            text-align: center;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 1em;
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .about h2, .experience h2, .education h2, .skills h2 {
+                font-size: 2em;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="profile.jpg" alt="Natraj Adepu" class="profile-img">
+            <h1>Natraj Adepu</h1>
+            <p>Full Stack Java Developer</p>
+            <div class="contact-info">
+                <a href="mailto:natrajadepu57@gmail.com">📧 Email</a>
+                <a href="tel:+16097555859">📞 +1 609-755-5859</a>
+                <a href="https://www.linkedin.com/in/natraj-adepu018" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/Natraj-Adepu12" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                Senior Full Stack Java Engineer with <strong>8+ years of experience</strong> designing and developing enterprise-grade, scalable applications across financial, payments, retail, and technology domains. Strong proficiency in React.js and Angular with extensive backend expertise in Java and Spring Boot.
+            </p>
+            <p>
+                Proven track record in building microservices architecture, implementing event-driven systems using Apache Kafka and RabbitMQ, and working with both relational (PostgreSQL, Oracle, MySQL) and NoSQL databases (MongoDB, Cassandra). Experienced in cloud deployments on AWS, GCP, and Azure with strong CI/CD automation skills.
+            </p>
+            <p>
+                Passionate about clean code, test-driven development, and delivering high-quality software solutions that solve real business problems. Strong advocate of Agile/Scrum methodologies with excellent collaboration and communication skills.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            
+            <div class="job">
+                <h3>Sallie Mae</h3>
+                <div class="job-title">Full Stack Software Engineer</div>
+                <div class="job-duration">April 2024 - January 2025 | New Castle, DE</div>
+            </div>
+
+            <div class="job">
+                <h3>American Express</h3>
+                <div class="job-title">Full Stack Software Engineer</div>
+                <div class="job-duration">September 2023 - March 2024 | Phoenix, AZ</div>
+            </div>
+
+            <div class="job">
+                <h3>Synchrony Financial</h3>
+                <div class="job-title">Full Stack Software Engineer</div>
+                <div class="job-duration">February 2022 - August 2023 | Chicago, IL</div>
+            </div>
+
+            <div class="job">
+                <h3>Casey's General Store</h3>
+                <div class="job-title">Full Stack Software Engineer</div>
+                <div class="job-duration">June 2020 - January 2022 | Ankeny, IA</div>
+            </div>
+
+            <div class="job">
+                <h3>Proplus Logics</h3>
+                <div class="job-title">Java Developer</div>
+                <div class="job-duration">August 2017 - May 2020 | Coimbatore, India</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <h2>Education</h2>
+            
+            <div class="degree">
+                <h3>Master of Science in Information Technology</h3>
+                <p><strong>Wilmington University</strong> | New Castle, DE</p>
+                <p>Graduated: April 2024</p>
+            </div>
+
+            <div class="degree">
+                <h3>Bachelor of Technology in Computer Science Engineering</h3>
+                <p><strong>Lovely Professional University</strong> | Jalandhar, India</p>
+                <p>Graduated: 2017</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>Java 8/11/17/21</li>
+                        <li>Spring Boot</li>
+                        <li>Spring Security</li>
+                        <li>Spring Batch</li>
+                        <li>Microservices</li>
+                        <li>RESTful APIs</li>
+                        <li>Apache Kafka</li>
+                        <li>RabbitMQ</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Redux Toolkit</li>
+                        <li>Angular 12+</li>
+                        <li>NgRx</li>
+                        <li>TypeScript</li>
+                        <li>HTML5/CSS3</li>
+                        <li>Material-UI</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>Oracle</li>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                        <li>Cassandra</li>
+                        <li>Redis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <ul>
+                        <li>AWS (EC2, S3, CloudWatch)</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Azure (AKS)</li>
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Jenkins</li>
+                        <li>GitHub Actions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Natraj Adepu. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
